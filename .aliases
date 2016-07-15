@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 
+# Enter new ones here?
+alias gc="git branch | grep '*' | awk -F_ '{printf \"[\" \$2\"] \"}' > ~/commit_temp &&  git commit -eF ~/commit_temp && rm ~/commit_temp"
+alias gpso='git push origin'
+alias gplo='git pull origin'
+alias gs='git status'
+alias pm='python manage.py'
+alias subl='open -a "SublimeText.App"'
+alias ghdeploy='git checkout gh-pages && git pull origin master && git push origin gh-pages && git checkout master'
+alias harpcompile='harp compile _harp ./'
+alias ghreps='harpcompile && git add . && git commit -m "Get your reps in" && gpso master && ghdeploy'
+alias runvarnish='sudo /usr/local/Cellar/varnish/4.0.2/sbin/varnishd -n /usr/local/var/varnish -f /usr/local/etc/varnish/desktop.vcl -s malloc,256M -a :80 -u mattjared'
+alias runmobile='sudo killall varnishd && sudo /usr/local/Cellar/varnish/4.0.2/sbin/varnishd -n /usr/local/var/varnish -f /usr/local/etc/varnish/mobile.vcl -s malloc,256M -a :80 -u mattjared'
+alias rundesktop='sudo killall varnishd && sudo /usr/local/Cellar/varnish/4.0.2/sbin/varnishd -n /usr/local/var/varnish -f /usr/local/etc/varnish/desktop.vcl -s malloc,256M -a :80 -u mattjared'
+alias clearCache='echo '\''flush_all'\'' | nc localhost 11211'
+alias rebash='. ~/.bash_profile'
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."

@@ -499,8 +499,8 @@ EOD
 # See: https://security.stackexchange.com/a/47786/8918
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
-# Install the Cobalt2 theme for iTerm
-open "${HOME}/init/Cobalt2.itermcolors"
+# Install the Solarized Dark theme for iTerm
+# open "${HOME}/init/Solarized Dark.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
