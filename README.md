@@ -1,3 +1,6 @@
+# Forked from mathias' legendary dotfiles and changed to suit my needs / likes.
+https://github.com/mathiasbynens/dotfiles
+
 # Mathias’s dotfiles
 
 ![Screenshot of my shell prompt](https://i.imgur.com/EkEtphC.png)
