@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Enter new ones here?
-alias gc="git branch | grep '*' | awk -F_ '{printf \"[\" \$2\"] \"}' > ~/commit_temp &&  git commit -eF ~/commit_temp && rm ~/commit_temp"
+alias gc=alias gc="git branch | grep '*' | sed 's/* //g' | awk -F_ '{printf \"[\" \$1\"] \"}' > ~/commit_temp &&  git commit -eF ~/commit_temp && rm ~/commit_temp"
 alias gpso='git push origin'
 alias gplo='git pull origin'
 alias gs='git status'
